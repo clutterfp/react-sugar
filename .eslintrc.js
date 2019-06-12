@@ -1,24 +1,25 @@
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-    node: true,
-  },
-  extends: 'airbnb',
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
+    env: {
+        browser: true,
+        commonjs: true,
+        es6: true,
+        node: true,
+        jest: true
     },
-    ecmaVersion: 2018,
-    sourceType: 'module',
-  },
-  plugins: [
-    'react',
-  ],
-  rules: {
-  },
+    extends: 'airbnb-base',
+    globals: {
+        Atomics: 'readonly',
+        SharedArrayBuffer: 'readonly'
+    },
+    parserOptions: {
+        ecmaVersion: 2018
+    },
+    rules: {
+        indent: ['error', 4],
+        'comma-dangle': 'off',
+        'implicit-arrow-linebreak': 'off',
+        'operator-linebreak': 'off',
+        'func-names': 'off',
+        'space-before-function-paren': 'off'
+    }
 };
